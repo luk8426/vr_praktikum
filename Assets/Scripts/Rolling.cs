@@ -17,7 +17,7 @@ public class Rolling : MonoBehaviour
     void Update()
     {
         if (start_pos.x - transform.position.x < 1 && start_pos.x - transform.position.x > 0) {
-            transform.Translate(new Vector3((float) 0.4*direction, 0, 0) * Time.deltaTime);
+            transform.Translate(new Vector3((float) 0.3*direction, 0, 0) * Time.deltaTime);
             // transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime);
         }
         else{
