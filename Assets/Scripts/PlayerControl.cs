@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    private Vector3 start_pos;
     public bool keyboard;
     public float speed = 1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        start_pos = transform.position;
     }
 
     // Update is called once per frame
@@ -28,5 +29,11 @@ public class PlayerControl : MonoBehaviour
         if (other.gameObject.CompareTag("Pick Up")){
             other.gameObject.SetActive(false);
         }
+        if (other.gameObject.CompareTag("DoNotHit"))     
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene( UnityEngine.SceneManagement.SceneManager.GetActiveScene().name );
+            transform.position = start_pos;
+        }
+        
     }
 }
