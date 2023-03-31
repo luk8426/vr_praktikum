@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/firststeps.unity
     guid: 7eb344668f20d9b4f80e4c57a16f0303
+  - enabled: 1
+    path: Assets/Scenes/inspection.unity
+    guid: fef3a718225a11c45abe633b865b9649
+  - enabled: 1
+    path: Assets/Scenes/cockpit.unity
+    guid: d9637c294edc2c0449cc9e4a685690c5
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 08246a76e020fa8458fae760079ab6d0,
       type: 2}
