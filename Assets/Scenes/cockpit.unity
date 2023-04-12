@@ -386,6 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 220552236}
+  - component: {fileID: 220552237}
   m_Layer: 0
   m_Name: Pivot GameStick
   m_TagString: Untagged
@@ -409,6 +410,20 @@ Transform:
   m_Father: {fileID: 543450652206105202}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: -6.621, y: 2.322, z: -6.417}
+--- !u!114 &220552237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220552235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840078fa721d1e347b7249aed9365cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 0
 --- !u!1 &241733613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036681269}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2.7482376, y: 76.3, z: 130.48457}
+  m_LocalPosition: {x: 2.7482376, y: 45.6, z: 130.48457}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
