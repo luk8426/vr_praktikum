@@ -443,3 +443,4 @@ MonoBehaviour:
   player: {fileID: 0}
   warningHeight: 200
   warnImage: {fileID: 8283917778008335216}
+  blinkIntervall: 0

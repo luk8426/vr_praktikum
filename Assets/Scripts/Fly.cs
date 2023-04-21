@@ -6,6 +6,7 @@ public class Fly : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    public GameObject speed_button;
     void Start()
     {
         
@@ -14,6 +15,7 @@ public class Fly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (speed_button!=null)speed = speed_button.transform.position.y * 10;
         if (Input.GetKey(KeyCode.W)){
             this.transform.Translate (Vector3.forward * speed * Time.deltaTime);
         }
