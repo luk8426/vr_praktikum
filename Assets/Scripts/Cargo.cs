@@ -18,17 +18,24 @@ public class Cargo : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.K)){
-        //if (Input.GetButtonDown("Fire2")){
-            //render.enabled = true;
-            c_rigidbody.useGravity = true;
+        if (Input.GetKey(KeyCode.K)||Input.GetButtonDown("Fire2")){
+            c_rigidbody.isKinematic = false;
         }
 
 
     }
     void OnTriggerEnter(Collider other){
         if (other.gameObject.CompareTag("target")){
-            UnityEngine.SceneManagement.SceneManager.LoadScene( UnityEngine.SceneManagement.SceneManager.GetActiveScene().name );
+            //c_rigidbody.useGravity = false;
+            c_rigidbody.isKinematic = true;
+            //this.transform.position = position;
+            //UnityEngine.SceneManagement.SceneManager.LoadScene( UnityEngine.SceneManagement.SceneManager.GetActiveScene().name );
+        }
+        else{
+            if (other!=null){
+                c_rigidbody.isKinematic = true;
+                this.transform.position = position;
+            }
         }
         
     }
