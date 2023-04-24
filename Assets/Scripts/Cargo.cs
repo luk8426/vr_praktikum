@@ -7,6 +7,7 @@ public class Cargo : MonoBehaviour
     //public MeshRenderer render;
     public Rigidbody c_rigidbody;
     private Vector3 position;
+    public bool button_pressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,9 @@ public class Cargo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKey(KeyCode.K)||Input.GetButtonDown("Fire2")){
+        if (Input.GetKey(KeyCode.K)||Input.GetButtonDown("Fire2")||button_pressed){
             c_rigidbody.isKinematic = false;
+            button_pressed = false;
         }
 
 

@@ -25,8 +25,8 @@ public class ButtonFollowVisual : MonoBehaviour
     public MeshRenderer button_visual;
     public Material active_mat;
     public Material inactive_mat;
-    public GameObject hud;
-    private bool hud_active = true;
+    public GameObject object_to_activate;
+    private bool object_active = true;
 
 
     // Start is called before the first frame update
@@ -65,8 +65,8 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             isFollowing = false;
             freeze = false;
-            hud_active = !hud_active;
-            hud.SetActive(hud_active);
+            object_active = !object_active;
+            object_to_activate.SetActive(object_active);
         }
     }
 
@@ -83,7 +83,7 @@ public class ButtonFollowVisual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hud_active){
+        if (object_active){
             button_visual.material = active_mat;
         }
         else{

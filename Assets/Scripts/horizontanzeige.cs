@@ -6,9 +6,12 @@ public class horizontanzeige : MonoBehaviour
 {
     public GameObject ground;
     public bool isVertical;
+    public bool isCompass;
+    private float orientation_y;
     // Start is called before the first frame update
     void Start()
     {
+        orientation_y = transform.rotation.eulerAngles.y;
         
     }
 
@@ -17,6 +20,10 @@ public class horizontanzeige : MonoBehaviour
     {
         Vector3 rot = ground.transform.rotation.eulerAngles;
         if (isVertical) rot.y = transform.rotation.eulerAngles.y;
+        if (isCompass) {
+            rot.x = transform.rotation.eulerAngles.x;
+            rot.z = transform.rotation.eulerAngles.z;
+        }
         transform.rotation = Quaternion.Euler(rot.x, rot.y, rot.z);
     }
 }
