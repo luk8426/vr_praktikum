@@ -15,11 +15,15 @@ public class LightColorSwitch : MonoBehaviour
      public GameObject spotlight;
  
      public float smooth = 40;
+
+     public float fog_density_limit = 0.002f;
      void Start(){
          this.GetComponent<Light>().color = new Color(r, g, b);
          spotlight.SetActive(false);
      }
      void Update(){
+
+        if (RenderSettings.fogDensity < fog_density_limit) RenderSettings.fogDensity += Time.deltaTime/1000000;
         if (Input.GetKey(KeyCode.N)){
             darken = true;
         } 

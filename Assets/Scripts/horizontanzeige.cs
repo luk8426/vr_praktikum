@@ -21,8 +21,7 @@ public class horizontanzeige : MonoBehaviour
         Vector3 rot = ground.transform.rotation.eulerAngles;
         if (isVertical) rot.y = transform.rotation.eulerAngles.y;
         if (isCompass) {
-            rot.x = transform.rotation.eulerAngles.x;
-            rot.z = transform.rotation.eulerAngles.z;
+            transform.Rotate(0, rot.y, 0);
         }
         transform.rotation = Quaternion.Euler(rot.x, rot.y, rot.z);
     }

@@ -10,6 +10,7 @@ public class objective : MonoBehaviour
     public AudioSource radio_source; 
     public AudioClip step_done;
     public LightColorSwitch daylight;
+    public ParticleSystem particles;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class objective : MonoBehaviour
             if (daylight!=null) daylight.darken=true;
             radio_source.PlayOneShot(step_done);
             this.transform.position = new Vector3(-300, -300, -300);
+            particles.Clear();
         }
     }
 }
