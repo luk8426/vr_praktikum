@@ -31,7 +31,8 @@ public class objective : MonoBehaviour
             if (daylight!=null) daylight.darken=true;
             radio_source.PlayOneShot(step_done);
             this.transform.position = new Vector3(-300, -300, -300);
-            particles.Clear();
+            var main = particles.main;
+            main.startColor = new Color(0, 255, 0);
         }
     }
 }

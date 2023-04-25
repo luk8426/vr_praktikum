@@ -15,7 +15,6 @@ public class turnLightOnAtNight : MonoBehaviour
         g = initalizeColor(g);
         b = initalizeColor(b);
         this.GetComponent<Light>().color = new Color(0, 0, 0);
-        Debug.Log(r);
     }
 
     // Update is called once per frame

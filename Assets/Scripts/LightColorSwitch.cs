@@ -23,7 +23,7 @@ public class LightColorSwitch : MonoBehaviour
      }
      void Update(){
 
-        if (RenderSettings.fogDensity < fog_density_limit) RenderSettings.fogDensity += Time.deltaTime/1000000;
+        if (RenderSettings.fogDensity < fog_density_limit) RenderSettings.fogDensity += Time.deltaTime/100000;
         if (Input.GetKey(KeyCode.N)){
             darken = true;
         } 

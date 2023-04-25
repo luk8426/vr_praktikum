@@ -8,7 +8,7 @@ public class SliderFollowVisual : MonoBehaviour
 {
     public Transform visualTarget;
     public Vector3 localAxis;
-    public float followAngleTreshold = 45;
+    public float followAngleTreshold = 180;
 
     private bool freeze = false;
 
@@ -21,6 +21,8 @@ public class SliderFollowVisual : MonoBehaviour
     private bool isFollowing = false;
 
     public AudioClip click;
+
+    public FlyJoystick control;
 
 
     // Start is called before the first frame update
@@ -84,6 +86,12 @@ public class SliderFollowVisual : MonoBehaviour
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+            /*if (visualTarget.position.z > 0.45) 
+                visualTarget.position = new Vector3(visualTarget.position.x, visualTarget.position.y, 0.45F);
+            if (visualTarget.position.z < 0) 
+                visualTarget.position = new Vector3(visualTarget.position.x, visualTarget.position.z, 0);
+            */
+            control.speed = visualTarget.localPosition.z * 50;
             AudioSource.PlayClipAtPoint(click, transform.position, 1);
         }
     }

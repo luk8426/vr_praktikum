@@ -19,7 +19,7 @@ public class FlyJoystick : MonoBehaviour
     {
         float inputYaw = 0;
         if (!isModel){
-        speed = Input.GetAxis("Throttle") * speedAmplifier;
+        //speed = Input.GetAxis("Throttle") * speedAmplifier;
         this.transform.Translate (Vector3.forward * speed * Time.deltaTime);
         inputYaw = Input.GetAxis("Yaw") * rotationSpeed * Time.deltaTime;
         }
