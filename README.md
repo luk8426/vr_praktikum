@@ -7,7 +7,7 @@ Die vorgegebene Funktionaliät habe ich dahingehend erweitert, dass der Ausgangs
 + Hard 🔴 
 + Extreme ⚫
 
-Die Farben finden sich auch im Layout der Boards wieder. Das Easy-Board besitzt keinerlei zusätzliche Features im Vergleich zu dem im Tutorial gefertigten Board. Das **Level Hard** besitzt zusätzlich einen **Gegner**, der den eignenen Ball jagt. Bei einer Berührung gilt das Level als sofort verloren und man landet wieder am Level-Auswahl-Board. Das **Level Extreme** habe ich um **zwei hin und her rollende Säulen** erweitert. Bei jedem Richtungswechsel der rollenden Säulen **verändern diese ihre Länge** wobei immer genug Platz bleibt, dass der Ball noch durch mindestens eine der Lücken passt. Genau wie beim Level Hard gilt auch hier bei einer Berührung der Säulen mit dem Ball das Spiel als sofort verloren und Ball und Spieler werden zurück zum Ausgangspunkt teleportiert. Wichtig ist dabei, dass man bei einem Teleportationsvorgang kein Board in der Hand hält, da dieses sonst mitteleportiert wird. Ein Video, das das Spiel zeigt, findet sich hier:
+Die Farben finden sich auch im Layout der Boards wieder. Das Easy-Board besitzt keinerlei zusätzliche Features im Vergleich zu dem im Tutorial gefertigten Board. Das **Level Hard** besitzt zusätzlich einen **Gegner**, der den eignenen Ball jagt. Bei einer Berührung gilt das Level als sofort verloren und man landet wieder am Level-Auswahl-Board. Das **Level Extreme** habe ich um **zwei hin und her rollende Säulen** erweitert. Bei jedem Richtungswechsel der rollenden Säulen **verändern diese ihre Länge** wobei immer genug Platz bleibt, dass der Ball noch durch mindestens eine der Lücken passt. Genau wie beim Level Hard gilt auch hier bei einer Berührung der Säulen mit dem Ball das Spiel als sofort verloren und Ball und Spieler werden zurück zum Ausgangspunkt teleportiert. Wichtig ist dabei, dass man bei einem Teleportationsvorgang kein Board in der Hand hält, da dieses sonst mitteleportiert wird. Ein Video, das das gesamte Spiel zeigt, findet sich hier:
 [RollABall-Video](/Praktikum-Doku/RollABall.mp4)
 
 ## Teil 2 - Flugsimulator - Szene Inspection
@@ -19,6 +19,7 @@ Läuft man dann auf die hintere rechte Türe des Helikopters zu, kann man diese 
 In einem Dorf, unweit des Flugplatzes ist ein Unfall passiert. Da das Gelände keine schnelle Versorgung mit Hilfsgütern über den Boden zulässt, ist die einzige Option eine Versorgung aus der Luft. Du erklärst Dich dazu bereit diese Aufgabe zu übernehmen. Bevor die Hilfgüter abwerfen kannst, musst Du diese aber zunächst abholen und fliegst zu einem kleinen See, an dem einige Kisten gelagert sind. Anschließend machst du dich auf den Weg zu dem kleinen Dorf, in dem sich der Unfall ereignete, um die benötigten Hilfsgüter abzuwerfen.
 Das Video, dass die gesamte Story einmal durchspielt:
 [Story-Video](https://drive.google.com/file/d/1KfK5EaJ6j6ANLqxcrfrFZYuFdU0GZyiX/view?usp=share_link)
+(Ich empfehle das Video herunterzuladen)
 
 
 ### Die konkrete Umsetzung und Implementierung
