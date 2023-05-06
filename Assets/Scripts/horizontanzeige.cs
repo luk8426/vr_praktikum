@@ -7,12 +7,9 @@ public class horizontanzeige : MonoBehaviour
     public GameObject ground;
     public bool isVertical;
     public bool isCompass;
-    private float orientation_y;
     // Start is called before the first frame update
     void Start()
-    {
-        orientation_y = transform.rotation.eulerAngles.y;
-        
+    {        
     }
 
     // Update is called once per frame
