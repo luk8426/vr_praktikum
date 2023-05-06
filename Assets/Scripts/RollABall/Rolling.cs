@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert die rollenden Säulen im Level Extreme 
+///////////////////////////////////////////////////////////////////////
+
 public class Rolling : MonoBehaviour
 {
     private Vector3 start_pos;
@@ -18,17 +22,16 @@ public class Rolling : MonoBehaviour
     {
         if (start_pos.x - transform.position.x < 1 && start_pos.x - transform.position.x > 0) {
             transform.Translate(new Vector3((float) 0.3*direction, 0, 0) * Time.deltaTime);
-            // transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime);
         }
         else{
-            var r = new System.Random();
+            // Sobald die Säulen das Brett verlassen dreht sich die deren Bewegungsrichtung um, und die Größe wird innerhalb der Grenzen zufällig neu bestimmt 
             direction = direction * -1;
             transform.localScale = new Vector3(1, (float)(new System.Random().NextDouble()*1.2)+1 ,1);
             transform.Translate(new Vector3((float) 0.6*direction, 0, 0) * Time.deltaTime);        }
     }
     void OnTriggerEnter(Collider other){
         if (other.gameObject.CompareTag("Player")){
-            //Application.Quit();
+            // Funktionalität im Player implementiert
         }
     }
 }

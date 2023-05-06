@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert das Anzeigen der Flugdaten in dem Onboard-Screen
+////////////////////////////////////////////////////////////////////////////////////////
+
 public class DisplayFlightData : MonoBehaviour
 {
     public TextMeshProUGUI textSpeed;
@@ -24,9 +28,11 @@ public class DisplayFlightData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Der Text wird mit den variablen angereichert
         textHeight.text = "Alt.: " + System.Math.Round(player.transform.position.y, 2) + " m";
         textSpeed.text = "Speed: " + System.Math.Round(flyJoystick.speed, 2) + " km/h";
 
+        // Warnhöhe bestimmen
         if (player.transform.position.y < warningHeight){
             warn = true;
             textHeight.color = new Color(255, 0, 0);
@@ -39,6 +45,7 @@ public class DisplayFlightData : MonoBehaviour
             warn = false;
         }
 
+        // Blinken des Bildes und Texts
         if (warn){
             time_d += Time.deltaTime;
             if (time_d > 2 * blinkIntervall){

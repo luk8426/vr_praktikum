@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript ist eine leichte Abwandlung des gegebenen Skripts ButtonFollowVisual
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 public class SliderFollowVisual : MonoBehaviour
 {
@@ -86,11 +89,6 @@ public class SliderFollowVisual : MonoBehaviour
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
-            /*if (visualTarget.position.z > 0.45) 
-                visualTarget.position = new Vector3(visualTarget.position.x, visualTarget.position.y, 0.45F);
-            if (visualTarget.position.z < 0) 
-                visualTarget.position = new Vector3(visualTarget.position.x, visualTarget.position.z, 0);
-            */
             control.speed = visualTarget.localPosition.z * 50;
             AudioSource.PlayClipAtPoint(click, transform.position, 1);
         }

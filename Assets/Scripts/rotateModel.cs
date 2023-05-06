@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert die Drehbewegung des Modell-Helikopters
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class rotateModel : MonoBehaviour
 {
     public GameObject player;
@@ -16,6 +20,7 @@ public class rotateModel : MonoBehaviour
     {
         this.transform.localRotation = player.transform.rotation;
         Vector3 newAngles = this.transform.localEulerAngles;
+        // Die y-Komponente soll sich nicht ändern
         this.transform.localRotation = Quaternion.Euler(newAngles.x, 0, newAngles.z);
     }
 }

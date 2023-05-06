@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert das Setzen der button_pressed Variable im Skript Cargo 
+//  Es ist eine Abwandlung des gegebenen Skripts ButtonFollowVisual
+//  Wobei der Button immer wieder in den selben Zustand zurückfällt
+////////////////////////////////////////////////////////////////////////////////////////
+
 public class dropCargoOnButton : MonoBehaviour
 {
     public Transform visualTarget;
@@ -55,6 +61,7 @@ public class dropCargoOnButton : MonoBehaviour
     {
         if(hover.interactorObject is XRPokeInteractor)
         {
+            // Setze Variable im Cargo-Skript, sodass die Kiste abgeworfen wird
             cargo.button_pressed = true;
             isFollowing = false;
             freeze = false;

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implemeniert den Nebel und den Tag-Nacht-Wechsel
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class LightColorSwitch : MonoBehaviour
 {
      public float r;
@@ -22,7 +26,7 @@ public class LightColorSwitch : MonoBehaviour
          spotlight.SetActive(false);
      }
      void Update(){
-
+        // Diese Zeile erhöht die Nebeldichte kontinuierlich
         if (RenderSettings.fogDensity < fog_density_limit) RenderSettings.fogDensity += Time.deltaTime/100000;
         if (Input.GetKey(KeyCode.N)){
             darken = true;
@@ -35,16 +39,10 @@ public class LightColorSwitch : MonoBehaviour
             if (b <= 0) b = 0;
             this.GetComponent<Light>().color = new Color (r, g, b);
             if (r <= 0.35) {
+                // Ab einem Schwellwert wird dem Himmel eine neue Textur verpasst
                 RenderSettings.skybox=night_mat;
                 
             }
         }
-        /**
-        if (Input.GetButtonDown("Fire1")){
-            if (spotlight.activeInHierarchy){
-                spotlight.SetActive(false);
-            }
-            else spotlight.SetActive(true);
-        }**/
      }
  }

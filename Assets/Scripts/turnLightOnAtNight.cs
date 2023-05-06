@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert das Anschalten von Lichtern bei Nacht
+//  Dadurch, dass der Shader bei Spotlights das Licht nicht dynamisch ändern kann, ist es überall deaktiviert
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class turnLightOnAtNight : MonoBehaviour
 {
     public Light sun;

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert das Steuern des Helikopters mit den Tasten WASD
+////////////////////////////////////////////////////////////////////////////////////////
+
 public class Fly : MonoBehaviour
 {
     // Start is called before the first frame update

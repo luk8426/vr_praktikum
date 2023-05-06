@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert die Steuerung der eigenen Spieler-Kugel  
+/////////////////////////////////////////////////////////////////////////////
+
 public class PlayerControl : MonoBehaviour
 {
     private Vector3 start_pos;
@@ -27,10 +31,12 @@ public class PlayerControl : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if (other.gameObject.CompareTag("Pick Up")){
+            // Deaktiviere die PickUp Objekte bei Berührung
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.CompareTag("DoNotHit"))     
         {
+            // Wird etwas berührt, dass nicht berührt werden soll, wird das Spiel zurückgesetzt
             UnityEngine.SceneManagement.SceneManager.LoadScene( UnityEngine.SceneManagement.SceneManager.GetActiveScene().name );
             transform.position = start_pos;
         }

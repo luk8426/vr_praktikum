@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Dieses Skript dient dem fixieren von Objekten gegnüber dem Boden auf unterschiedlichen Achsen
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class horizontanzeige : MonoBehaviour
 {
     public GameObject ground;
@@ -18,6 +22,7 @@ public class horizontanzeige : MonoBehaviour
         Vector3 rot = ground.transform.rotation.eulerAngles;
         if (isVertical) rot.y = transform.rotation.eulerAngles.y;
         if (isCompass) {
+            // Erzeuge eine Gegenrotation, wenn der Spieler gegenüber dem Boden rotiert
             transform.Rotate(0, rot.y-transform.rotation.eulerAngles.y, 0);
             return;
         }

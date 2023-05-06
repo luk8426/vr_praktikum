@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+///////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert die Buttons in der Mittelkonsole 
+///////////////////////////////////////////////////////////////////////
+
 public class ButtonFollowVisual : MonoBehaviour
 {
     public Transform visualTarget;
@@ -23,6 +27,8 @@ public class ButtonFollowVisual : MonoBehaviour
     public AudioClip click;
 
     public MeshRenderer button_visual;
+
+    // Attribute um die Button-Funktionalität besser auszugestalten
     public Material active_mat;
     public Material inactive_mat;
     public GameObject object_to_activate;

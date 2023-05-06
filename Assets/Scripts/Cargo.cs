@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert den Abwurfvorgang der Kiste 
+///////////////////////////////////////////////////////////////////////
+
 public class Cargo : MonoBehaviour
 {
     //public MeshRenderer render;
@@ -20,7 +24,9 @@ public class Cargo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Drei Optionen die Kiste abzuwerfen. Die Variable button_pressed wird von dem Button gesetzt
         if (Input.GetKey(KeyCode.K)||Input.GetButtonDown("Fire2")||button_pressed){
+            // Lass die Kiste fallen
             c_rigidbody.isKinematic = false;
             button_pressed = false;
             transform.SetParent(null);
@@ -30,10 +36,12 @@ public class Cargo : MonoBehaviour
     }
     void OnTriggerEnter(Collider other){
         if (other.gameObject.CompareTag("target")){
+            // Wenn die Kiste auf die Zielscheibe fällt, so soll sie dort einfach stehen bleiben
             c_rigidbody.isKinematic = true;
         }
         else{
             if (other!=null){
+                // Ansonsten wird die Kiste an ihre Position unter dem Heli zurückgesetzt
                 c_rigidbody.isKinematic = true;
                 transform.SetParent(heli);
                 this.transform.localPosition = at_heli_position;

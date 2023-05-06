@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///////////////////////////////////////////////////////////////////////
+//  Dieses Skript implementiert die Drehung der PickUp-Elemente 
+///////////////////////////////////////////////////////////////////////
+
 public class Rotator : MonoBehaviour
 {
     // Start is called before the first frame update
