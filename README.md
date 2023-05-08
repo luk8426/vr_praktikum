@@ -36,3 +36,6 @@ Die Umgebung besteht aus einem eigens aus verschiedensen Modellen zusammengestel
 
 Durch pressen der Taste _N_ kann man zusätzlich direkt einen Wechsel zur Nacht auslösen und es beginnt lansgam dunkel zu werden. Ist eine gewisse Helligkeit unterschritten, ändert sich auch die angezeige Skybox. Außerdem legt sich sobald man die Szene betritt nach und nach mehr Nebel in die Landschaft. Beide Funktionalitäten sind im Skript _LightColorSwitch.cs_ implementiert.  
 
+
+**Anmerkung**
+Ich habe mein Projekt auf verschieden PCs im Labor getestet. Je nach verwendeter VR-Brille war die Position im Cockpit leicht anders. Ich nehme an, dass dies mit der Kalibrierung der Brille zusammenhängt. Die Videos sind an der Brille I entstanden. 
